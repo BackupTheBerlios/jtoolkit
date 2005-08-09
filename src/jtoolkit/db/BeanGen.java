@@ -431,7 +431,7 @@ public class BeanGen extends JFrame
 	{
 		this.dispose();
 	}
-	
+	//
 	// inner class BeanGenDAO	
 	public class BeanGenDAO 
 	{
