@@ -1,0 +1,67 @@
+<h3>JToolkit</h3>
+
+
+<h3>JToolkit architecture</h3>
+	<ul>
+	<li>Java based tools for developers and end users
+
+	<li>Wrappers for various platforms and tools
+
+	<li>Developer APIs for tool customization
+	</ul>
+
+
+<h3>Tool : JavaBean and EntityBean Generator</h3>
+
+<b>Description</b>
+<p>
+	This tool will be used to generate a javabean from a data source.
+	The data source can be a RDBMS database table or a XSD schema.
+	Tool will read the schema from table or XSD and will generate a bean source code.
+</p>
+<br>
+
+<b>Design steps</b>
+    <p>
+	<b>Step 1: Connect to a datasource</b>
+	<ul>
+		<li><b>Input   :</b> JDBC Datasource* credentials with jndi name OR  url to XSD schema**
+		<li><b>Output  :</b> A connection to Datasource or url connection to XSD schema
+	</ul>
+	</p>
+
+	<p>
+	<b>Step 2: Retrieve database table/XSD schema columns</b>
+	<ul>
+		<li><b>Input    :</b>	Datasource connection and name of the table OR XSD file content
+		<li><b>Output   :</b>	Java object with table columns/xsd schema definition populated
+	</ul>
+	</p>
+
+	<p>
+	<b>Step 3: Generte a JavaBean or Entity Bean source code</b>
+	<ul>
+		<li><b>Input    :</b>	Source file detail (Name, path, source template api interface etc.)
+		<li><b>Output   :</b>   JavaBean/Entity Bean source
+	</ul>
+	</p>
+<br>
+
+<b>	*Datasource </b>
+<p>
+		We will use JDBC datasource (JDBC API 3.0) as a preferred method to lookup and connect to a datasource
+		<br>
+		For More information refer <i><a href="http://java.sun.com/j2se/1.4.2/docs/guide/jdbc/getstart/datasource.html">http://java.sun.com/j2se/1.4.2/docs/guide/jdbc/getstart/datasource.html</a></i>
+</p>
+<br>
+<b>**XSD schema</b>
+<p>
+		We will use the schema definition using XSD. Sample XSD schema will look like as shown here<br>
+		<i><a href="http://www.w3schools.com/schema/schema_example.asp">http://www.w3schools.com/schema/schema_example.asp</a>
+
+</p>
+
+
+
+
+
